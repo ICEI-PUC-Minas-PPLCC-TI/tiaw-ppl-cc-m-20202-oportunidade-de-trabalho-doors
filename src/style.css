@@ -1,0 +1,143 @@
+html
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+.cabecalho nav a
+{
+    color: white;
+    margin: 10px;
+    font-family:'Courier New', Courier, monospace;
+    font-size: xx-small;
+    align-items: center;
+}
+.cabecalho .menu-icone
+{
+    
+    color: white;
+    width: 50px;
+    font-size: 1.9em;
+    height: inherit;
+    position: absolute;
+    /* bottom: 30px; */
+    right: 0px;
+    line-height: 60px;
+    z-index: 1;
+}
+.active
+{
+    color: rgb(27, 18, 18);
+    margin: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(135, 135, 135, 0.29)!important;
+}
+.cabecalho nav a:hover
+{
+    background-color: rgba(255, 255, 255, 0.27);
+}
+.cabecalho
+{
+    background-color: rgb(77, 21, 21);
+    align-items: center;
+}
+.cabecalho2
+{
+    align-items: center;
+}
+.cabecalho img
+{
+    width: 100%;
+}
+
+.imagem
+{
+    align-items: center;
+}
+.user{
+    /* z-index: 99;
+    color: white;
+    width: 30px; */
+}
+#menumobile
+{
+    display: none;
+}
+#menumobile2
+{
+    display: none;
+}
+.menu-icone2{
+    display: none;
+}
+
+@media screen and ( max-width: 763px)
+{
+    .menu
+    {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 0%;
+        position: fixed;
+        overflow: hidden;
+        align-content: center;
+        align-items: center;
+        position: top;
+        transition: height 0.3s;
+    }
+     .cabecalho .menu-icone
+    {
+        display: none;
+    } 
+    .menu-icone2
+    {
+        display: block;
+        color: white;
+        width: 50px;
+        font-size: 1.4em;
+        height: inherit;
+        position: absolute;
+        top: 10px; 
+        right: 0px;
+        line-height: 60px;
+        z-index: 99;
+    }
+    #menumobile2:checked~label i:nth-child(1)
+    {
+        display: none;
+    }
+    #menumobile2:checked~label i:nth-child(2)
+    {
+        display: block;
+    }
+ 
+
+    #menumobile2:checked .menu
+    {
+        height: 100%;
+    }
+ 
+
+    #menumobile2:not(checked)~label i:nth-child(1)
+    {
+        display: block;
+    }
+    #menumobile2:not(checked)~label i:nth-child(2)
+    {
+        display: none;
+    }
+
+    .menu nav a
+    {
+        display: block;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 80px;
+        margin-bottom: 200px;
+        position: top;
+        width: 100%;
+        font-size: 17px;
+        align-items: center;
+        align-content: center;
+    }
+
+}

@@ -1,0 +1,196 @@
+                body {
+                    margin: 0px;
+                    padding: 0px;
+                    background-image: linear-gradient( black, rgb(163, 102, 10), black, rgb(179, 32, 32));
+                    background-color: rgb(92, 21, 21);
+                }
+                
+                .logo {
+                    max-width: 150px;
+                    border-radius: 20px;
+                    margin-left: 20px;
+                }
+                
+                .menu1 li {
+                    display: inline-flex;
+                }
+                
+                .menu1 {
+                    position: absolute;
+                    top: 100px;
+                    left: 50%;
+                    margin-left: -350px;
+                }
+                
+                .menu1 a {
+                    color: white;
+                }
+                
+                .conteiner_header {
+                    background-image: url(Imagens/Fundinho.jpg);
+                    border-radius: 20px;
+                    min-height: 120px;
+                    color: rgb(255, 255, 255);
+                    padding: 50px;
+                    background-size: cover;
+                    background-position: 0px -350px;
+                    margin-bottom: 20px;
+                    background-repeat: no-repeat;
+                }
+                
+                main {
+                    margin: 0px;
+                }
+                
+                .banner img {
+                    /* background-color: aqua; */
+                    width: 100%;
+                    margin: 0px;
+                    border-radius: 20px;
+                }
+                
+                .banner {
+                    /* background-color: aqua; */
+                    margin: 0px;
+                }
+                
+                .texto_principal {
+                    background-color: #b0b0b05a;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                }
+                
+                .texto_principal h1 {
+                    color: rgb(148, 15, 15);
+                }
+                
+                .card_area div {
+                    margin-bottom: 20px;
+                }
+                
+                .card_area img {
+                    width: 100%;
+                }
+                
+                .info {
+                    margin-top: 20px;
+                }
+                
+                .info h1 {
+                    font-size: 1.4em;
+                }
+                
+                .grid_cor1 {
+                    background-color: rgba(245, 219, 101, 0.208);
+                    padding: 20px;
+                    min-height: 220px;
+                    margin-bottom: 20px;
+                }
+                
+                .grid_cor1 img {
+                    width: 100%;
+                }
+                
+                .conteiner-footer {
+                    background-image: url(Imagens/Fundinho.jpg);
+                    min-height: 120px;
+                    padding: 20px;
+                    background-size: cover;
+                    background-position: 0px -650px;
+                }
+                
+                .conteiner-footer p {
+                    color: rgb(255, 255, 255);
+                }
+                
+                #menumobile {
+                    display: none;
+                }
+                
+                .menu-icone {
+                    display: none;
+                }
+                /* media queries */
+                
+                @media screen and (max-width: 600px) {
+                    .conteiner_header {
+                        background-position: 0px -150px;
+                        min-width: 100%;
+                    }
+                    @media screen and (min-width: 601px) and (max-width:980px) {
+                        .conteiner_header {
+                            background-position: 0px -250px;
+                            min-width: 100%;
+                        }
+                    }
+                }
+                
+                @media screen and (max-width: 1000px) {
+                    .menu {
+                        position: fixed;
+                        top: 0px;
+                        z-index: 999;
+                        max-width: 100% !important
+                    }
+                    .menu {
+                        display: absolute;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .main {
+                        margin-top: 140px;
+                    }
+                    .menu1 {
+                        display: flex;
+                        position: fixed;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        top: 0px;
+                        left: 320px;
+                        width: 100%;
+                        height: 0%;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        overflow: hidden;
+                        -webkit-transition: height 0.3s;
+                        -moz-transition: height 0.3s;
+                        -ms-transition: height 0.3s;
+                        -o-transition: height 0.3s;
+                        transition: height 0.3s;
+                    }
+                    .menu1 a {
+                        display: block;
+                        text-align: center;
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                    .menu-icone {
+                        width: 50px;
+                        height: inherit;
+                        display: block;
+                        position: absolute;
+                        top: 55px;
+                        right: 30px;
+                        line-height: 60px;
+                        color: white;
+                        z-index: 999;
+                    }
+                    #menumobile:checked~label i:nth-child(2) {
+                        display: block;
+                    }
+                    #menumobile:checked~label i:first-child {
+                        display: none;
+                    }
+                    #menumobile:not(:checked)~label i:first-child {
+                        display: block;
+                    }
+                    #menumobile:not(:checked)~label i:nth-child(2) {
+                        display: none;
+                    }
+                    #menumobile:checked~nav {
+                        height: 100%;
+                    }
+                    .menu-icon i {
+                        font-size: 1.7em;
+                    }
+                }
