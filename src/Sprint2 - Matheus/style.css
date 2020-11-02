@@ -43,3 +43,16 @@
     border-radius: 5px;
     padding: 10px 20px;
 }
+#filtro
+{
+    background-color:rgb(255, 255, 255);
+    border: solid rgb(0, 136, 255) 2px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.filtro
+{
+    font-weight: bolder;
+    margin-left: 50px;
+    
+}

@@ -29,7 +29,8 @@
                     <div class="col-12">
                         <p>
                             <label for="descForm">Descrição:</label>
-                            <textarea id="descForm" name="descForm" placeholder="Descrição detalhada da vaga..."></textarea>
+                            <textarea id="descForm" name="descForm"
+                                placeholder="Descrição detalhada da vaga..."></textarea>
                         </p>
                     </div>
                     <div class="col-12 col-lg-6">
@@ -58,11 +59,53 @@
                         </p>
                     </div>
                 </div>
+                    <div class="col-12 col-lg-6">
+                        <p>
+                            <label for="catForm">Categorias:</label>
+                            <select id="catForm" name="filtro">
+                                <option value=""></option>
+                                <option value="Engenharia de produção">Engenharia de produção</option>
+                                <option value="Jornalismo">Jornalismo</option>
+                                <option value="Direito">Direito</option>
+                                <option value="Letras">Letras</option>
+                                <option value="Ciência da Computação">Ciência da Computação</option>
+                                <option value="Administração">Administração</option>
+                            </select>
+                            
+                        </p>
+                    </div>
+                </div>
 
                 <p><button type="submit">Confirmar</button></p>
             </form>
         </div>
-        <div class="row" id="newsFeed">
+        
+            <div class="row">
+                <div class="col-12">
+
+                    <label for="filtro" class="filtro">Categorias</label>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+
+                    <select id="filtro" name="filtro">
+                        <option value="">Todas</option>
+                        <option value="Engenharia de produção">Engenharia de produção</option>
+                        <option value="Jornalismo">Jornalismo</option>
+                        <option value="Direito">Direito</option>
+                        <option value="Letras">Letras</option>
+                        <option value="Ciência da Computação">Ciência da Computação</option>
+                        <option value="Administração">Administração</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+        
+        <div class="row" id="newsFeed">2
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
