@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Sprint 2</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form id="register" method="post" class="formulario col-12">
+                <div class="row">
+                    <h1>Formulário de Vagas</h1>
+                    <span id="instrucoes"></span>
+                    <div class="col-12">
+                        <p>
+                            <label for="titleForm">Titulo:</label>
+                            <input type="text" id="titleForm" name="titleForm" autocomplete="off"
+                                placeholder="Breve descrição..." />
+                        </p>
+                    </div>
+                    <div class="col-12">
+                        <p>
+                            <label for="descForm">Descrição:</label>
+                            <textarea id="descForm" name="descForm" placeholder="Descrição detalhada da vaga..."></textarea>
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <p>
+                            <label for="benForm">Benefícios:</label>
+                            <textarea id="benForm" name="benForm" placeholder="Benefícios ofertados.."></textarea>
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <p>
+                            <label for="requisForm">Requisitos:</label>
+                            <textarea id="requisForm" name="requisForm" placeholder="Requisitos mínimos.."></textarea>
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <p>
+                            <label for="imgForm">Imagem:</label>
+                            <input type="text" id="imgForm" name="imgForm" autocomplete="off"
+                                placeholder="Link para foto..." />
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <p>
+                            <label for="salForm">Salário ofertado:</label>
+                            <input type="text" id="salForm" name="salForm" autocomplete="off" />
+                        </p>
+                    </div>
+                </div>
+
+                <p><button type="submit">Confirmar</button></p>
+            </form>
+        </div>
+        <div class="row" id="newsFeed">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
