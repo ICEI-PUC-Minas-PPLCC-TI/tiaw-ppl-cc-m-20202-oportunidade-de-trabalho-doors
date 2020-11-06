@@ -106,7 +106,7 @@ header a{
 }
 body
 {
-    background: url("imagens/fundo2.jpg") no-repeat right top;
+    background: url("../src/imagens/fundo2.jpg") no-repeat right top;
     background-size: 100% 50%;
     background-color: rgb(17, 29, 57);
 }
