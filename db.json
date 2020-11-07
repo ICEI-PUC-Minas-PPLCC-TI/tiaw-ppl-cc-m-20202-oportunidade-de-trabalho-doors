@@ -1,0 +1,78 @@
+{
+    "Vagas": [
+      {
+        "id": 1,
+        "img":"https://picsum.photos/id/1/200",
+        "title":"Procura-se estagiário de desenvolvimento",
+        "desc":"Procura-se estagiário URGENTEMENTE, que tenha experiência com HTML5, CSS3, Javascript e, que preferencialmente.",
+        "ben":"Vaga de estacionamento na empresa, auxílio transporte.",
+        "requis":"Preferencialmente já esteja no terceiro período ou períodos subsequentes",
+        "sal":"A discutir"
+      },
+      {
+        "id": 2,
+        "img":"https://picsum.photos/id/348/200",
+        "title":"Estágio em recurso humanos",
+        "desc":"Precisamos de um estagiário para aumentar o controle interno do shopping. Com as mudanças de logística trazidas pela pandemia tivemos que atualizar nosso sistema, portanto o quão antes o candidato puder começar melhor",
+        "ben":"Vale transporte, vale alimentação e plano de saúde Unimed",
+        "requis":"Estar cursando adminsitração",
+        "sal":"R$1000,00"
+      },
+      {
+        "id": 3,
+        "img":"https://picsum.photos/id/297/200",
+        "title":"Estágio em engenharia de produção",
+        "desc":"Somos uma empresa consolidada na área de produção de calçados. Estamos interessado em um estagiário que esteja disponível para começar no próximo mês e que tenha interesse na área de otimização da linha de produção.",
+        "ben":"Refeições cobertas pela empresa. Auxílio transporte. Desconto em abastecimento no posto perto da fábrica.",
+        "requis":"Estar entre o 4° e 8° período do curso de engenharia de produção, automação ou mecânica.",
+        "sal":"R$800,00"
+      }
+    ],
+    "tarefas": [
+      {
+        "id": 1,
+        "tarefa": "Copiar arquivos",
+        "contatoId": 1
+      },
+      {
+        "id": 2,
+        "tarefa": "Ligar Fulano",
+        "contatoId": 1
+      },
+      {
+        "id": 3,
+        "tarefa": "Copiar Dados",
+        "contatoId": 1
+      },
+      {
+        "id": 4,
+        "tarefa": "Ligar Maria",
+        "contatoId": 2
+      },
+      {
+        "id": 5,
+        "tarefa": "Fazer pão de queijo",
+        "contatoId": 3
+      },
+      {
+        "tarefa": "Maix uma coisa",
+        "contatoId": "1",
+        "id": 6
+      },
+      {
+        "tarefa": "Tarefa do Rommel",
+        "contatoId": "1",
+        "id": 7
+      },
+      {
+        "tarefa": "Tarefa do Rommel",
+        "contatoId": "1",
+        "id": 8
+      },
+      {
+        "tarefa": "Tarefa do Rommel",
+        "contatoId": "2",
+        "id": 9
+      }
+    ]
+  }
