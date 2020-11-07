@@ -1,3 +1,2 @@
-# IDEs
-*.swp
-*.swo
+/node_modules/
+.env
