@@ -1,37 +1,28 @@
 {
-  "contatos": [
+  "Vagas": [
     {
-      "id": 1,
-      "img": "https://source.unsplash.com/300x250/?man&sig=1",
-      "nome": "João Pereira",
-      "profissao": "Designer",
-      "empresa": "PUC Minas",
-      "endereco": "Contagem",
-      "cidade": "Rua X, 9",
-      "telefone": "9999999",
-      "email": "joao@yahoo.com.br"
+      "img":"https://picsum.photos/id/1/200",
+      "title":"Procura-se estagiário de desenvolvimento",
+      "desc":"Procura-se estagiário URGENTEMENTE, que tenha experiência com HTML5, CSS3, Javascript e, que preferencialmente.",
+      "ben":"Vaga de estacionamento na empresa, auxílio transporte.",
+      "requis":"Preferencialmente já esteja no terceiro período ou períodos subsequentes",
+      "sal":"A discutir"
     },
     {
-      "id": 2,
-      "img": "https://source.unsplash.com/300x250/?woman&sig=2",
-      "nome": "Maria Luiza",
-      "profissao": "Diretora de RH",
-      "empresa": "FCA Automóveis",
-      "endereco": "Betim",
-      "cidade": "Rua X, 9",
-      "telefone": "8888889",
-      "email": "maria@hotmail.com"
+      "img":"https://picsum.photos/id/348/200",
+      "title":"Estágio em recurso humanos",
+      "desc":"Precisamos de um estagiário para aumentar o controle interno do shopping. Com as mudanças de logística trazidas pela pandemia tivemos que atualizar nosso sistema, portanto o quão antes o candidato puder começar melhor",
+      "ben":"Vale transporte, vale alimentação e plano de saúde Unimed",
+      "requis":"Estar cursando adminsitração",
+      "sal":"R$1000,00"
     },
     {
-      "id": 3,
-      "img": "https://source.unsplash.com/300x250/?man&sig=3",
-      "nome": "Guilherme Pontes",
-      "profissao": "Professor",
-      "empresa": "UFMG",
-      "endereco": "Cidade tal",
-      "cidade": "Belo Horizonte",
-      "telefone": "777777777",
-      "email": "gui@gmail.com"
+      "img":"https://picsum.photos/id/297/200",
+      "title":"Estágio em engenharia de produção",
+      "desc":"Somos uma empresa consolidada na área de produção de calçados. Estamos interessado em um estagiário que esteja disponível para começar no próximo mês e que tenha interesse na área de otimização da linha de produção.",
+      "ben":"Refeições cobertas pela empresa. Auxílio transporte. Desconto em abastecimento no posto perto da fábrica.",
+      "requis":"Estar entre o 4° e 8° período do curso de engenharia de produção, automação ou mecânica.",
+      "sal":"R$800,00"
     }
   ],
   "tarefas": [
