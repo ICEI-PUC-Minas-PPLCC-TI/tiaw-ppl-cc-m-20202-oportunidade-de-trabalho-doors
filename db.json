@@ -28,51 +28,18 @@
       "sal":"R$800,00"
     }
   ],
-  "tarefas": [
+  "user": [
     {
       "id": 1,
-      "tarefa": "Copiar arquivos",
-      "contatoId": 1
+      "username": "adminEmpresa",
+      "password": "adminEmpresa",
+      "type": "empresa"
     },
     {
       "id": 2,
-      "tarefa": "Ligar Fulano",
-      "contatoId": 1
-    },
-    {
-      "id": 3,
-      "tarefa": "Copiar Dados",
-      "contatoId": 1
-    },
-    {
-      "id": 4,
-      "tarefa": "Ligar Maria",
-      "contatoId": 2
-    },
-    {
-      "id": 5,
-      "tarefa": "Fazer pão de queijo",
-      "contatoId": 3
-    },
-    {
-      "tarefa": "Maix uma coisa",
-      "contatoId": "1",
-      "id": 6
-    },
-    {
-      "tarefa": "Tarefa do Rommel",
-      "contatoId": "1",
-      "id": 7
-    },
-    {
-      "tarefa": "Tarefa do Rommel",
-      "contatoId": "1",
-      "id": 8
-    },
-    {
-      "tarefa": "Tarefa do Rommel",
-      "contatoId": "2",
-      "id": 9
+      "username": "adminUser",
+      "password": "adminUser",
+      "type": "user"
     }
   ]
 }
