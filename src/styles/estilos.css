@@ -1,13 +1,6 @@
+.main{margin: 20px;}
 
-.main
-{
-    margin: 20px;
-}
-
-body
-{
-    font-family:'Courier New', Courier, monospace;
-}
+body{font-family:'Courier New', Courier, monospace;}
 
 .menu1 a{
      color: white;
@@ -18,46 +11,128 @@ body
 
 .logo{ max-width: 150px;}
 
-.header
-{
-    background-color: rgb(167, 42, 42);
-}
+.header{background-color: rgb(167, 42, 42);}
 
 .footer{
-    
-    
-    background-position: bottom;
     color: white;
     padding: 5px;
     background-color: rgb(17, 29, 57);
     align-content: center;
     align-items: center;
 }
-.footer img{
 
+.footer img{
     max-height: 50px;
-    position: center;
-    
+    position: center;  
 }
 
+header{background-color: rgb(16, 69, 63);}
+
+header a{color: white;}
+
+.logo{width: 150px;}
+
+.menu-icone{width: 50px;}
+
+/*  Corpo */
+
+.modal-title 
+{
+    padding-left: 20px;
+    padding-right: 25px;
+}
+
+.cima button
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: rgba(0, 0, 0, 0.418);
+    border: none;
+}
+
+.modal-body{ padding: 40px;}
+
+.primeira
+{
+    position: relative;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px 30px;
+    border-radius: 20px;
+    border: solid black 2px;
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+html
+{
+    background: url("../imagens/fundo2.jpg")no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+body{background-color: rgba(17, 29, 57, 0);}
+
+.sub
+{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.segunda
+{   
+    margin-top: 30px;
+    background-color: rgb(17, 29, 57);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.segunda h1
+{
+   margin-bottom: 20px;
+   color: white;
+}
+
+.carousel-inner
+{
+    border-radius: 20px;
+    border: solid black 2px;
+}
+
+.carousel-inner h5{color: white;}
+
+.carousel-inner {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-inner img{width: 100%;}
+
+.modal-content
+{
+    border-radius: 40px;
+    border: solid black 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+.primeira h1, p{color: white;}
+
+.but
+{
+    background-color:rgba(0, 0, 0, 0.486) ;
+    border: solid black 2px;
+}
+
+.but:hover
+{
+    background-color: rgba(255, 255, 255, 0.438);
+    border: solid black 2px;
+}
 
 /* Media Queries */
-
-header{
-    background-color: rgb(16, 69, 63);
-}
-
-header a{
-    color: white;
-}
-
-.logo{
-    width: 150px;
-}
-
-.menu-icone{
-    width: 50px;
-}
 
 @media screen and (min-width: 1024px) {
     .login p{
@@ -69,90 +144,23 @@ header a{
     }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
     .login i{
         display: none;
     }
-}
-
-
-
-/*  Corpo */
-
-.modal-title 
-{
-    padding-left: 20px;
-    padding-right: 25px;
-}
-.cima button
-{
-    margin-left: 15px;
-    margin-right: 15px;
-    background-color: rgba(0, 0, 0, 0.418);
-    border: none;
+    .primeira{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
     
 }
-.modal-body
-{
-    padding: 40px;
-}
-.primeira
-{
-    padding: 30px;
-    border-radius: 20px;
-    border: solid black 2px;
-    background-color: rgba(0, 0, 0, 0.301);
-    position: right;
-}
-body
-{
-    background: url("../imagens/fundo2.jpg") no-repeat right top;
-    background-size: 100% 50%;
-    background-color: rgb(17, 29, 57);
-}
-.sub
-{
-    margin-top: 10px;
-    font-size: 12px;
-}
-.segunda
-{
-    margin-top: 50%;
-    /* background-color: brown; */
-    background-size: 0% 200%;
-}
-.segunda h1
-{
-   margin-bottom: 60px;
-   color: white;
-}
-.carousel-inner
-{
-    border-radius: 20px;
-    border: solid black 2px;
-}
-.carousel-inner h5
-{
-    color: white;
-}
 
-.modal-content
-{
-    border-radius: 40px;
-    border: solid black 4px;
-    background-color: rgb(255, 255, 255);
-}
-.primeira h1, p
-{
-    color: white;
-}
-.but
-{
-    background-color:rgba(0, 0, 0, 0.486) ;
-    border: solid black 2px;
-}
-.but:hover
-{
-    background-color: rgba(255, 255, 255, 0.438);
-    border: solid black 2px;
+@media screen  and (max-width: 767px) {
+    .carousel-inner {
+        width: 100%;
+    }
+    .primeira{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
 }
