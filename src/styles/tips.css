@@ -14,7 +14,7 @@ body {
 }
 
 .logo {
-    max-width: 150px;
+    height: 45px;
 }
 
 .header {
@@ -69,23 +69,66 @@ header a {
     }
 }
 
+
+
+/* main */
+
 .main h1 {
     text-align: center;
     border-radius: 5px;
     border: solid black 2px;
 }
 
-
-.iframe-container {
-    overflow: hidden;
-    padding-top: 56.25%;
-    position: relative;
+.text-area {
+    text-align: center;
+    font-size: 16px;
+    background-color: rgba(14, 133, 54, 0.349);
+    margin-top: 35px;
+    margin-bottom: 25px;
 }
 
-.iframe-container iframe {
+  /* carrousel */
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+  }
+      
+  .iframe-container {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;    
+  }
+      
+  .iframe-container iframe {
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
+  }
+      
+  #myCarousel a {
+    opacity: 0% !important;
+  }
+          
+#myCarousel a:hover {
+  opacity: 100% !important;
+}
+          
+#myCarousel li {
+  opacity: 80% !important;
+}
+      
+#myCarousel {
+  border: 3px solid rgba(2, 31, 128, 0.671);
+}
+      
+.carousel-caption {
+  opacity: 0% !important;
+}
+      
+.carousel-caption:hover {
+  opacity: 100% !important;
+  background-color: rgba(0, 0, 0, 0.39);
 }
