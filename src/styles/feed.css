@@ -1,0 +1,167 @@
+body{font-family:'Courier New', Courier, monospace;}
+
+.menu1 a{
+    color: white;
+    margin: 10px;
+    font-family:'Courier New', Courier, monospace;
+    align-items: center;
+}
+
+.logo{ max-width: 150px;}
+
+.footer{
+    color: white;
+    padding: 5px;
+    background-color: rgb(17, 29, 57);
+    align-content: center;
+    align-items: center;
+}
+
+.footer img{
+    max-height: 50px;
+    position: center;  
+}
+
+header{background-color: rgb(16, 69, 63);}
+
+header a{color: white;}
+
+.logo{width: 150px;}
+
+.menu-icone{width: 50px;}
+
+.filter{border-style: solid;}
+
+.box{
+    padding: 10px;
+    background-color:rgb(16, 69, 63);
+    color: white;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    -webkit-appearance: button;
+    appearance: button;
+    text-align: center;
+}
+
+.box select {
+    display: inline;
+    padding: 12px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+.serAndFil{
+    position: relative;
+    height: 100%;
+    padding: 10px;
+}
+.searchBar{
+    display: inline-block;
+    padding: 10px;    
+    background-color:rgb(16, 69, 63);
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    -webkit-appearance: button;
+    appearance: button;
+    text-align: center;
+}
+
+.searchBar #search{
+    border-radius: 5px;
+    border: none;
+    height: 44px;
+}
+
+.searchBar i{
+    display: inline-block;
+    color: white;
+    background-color:rgb(38, 100, 93); 
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.searchBar i:hover{
+    color: white;
+    background-color:rgb(20, 53, 49); ;
+}
+
+.card-body{position: relative;}
+
+.favIcon{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+.cardFav{box-shadow: 0 5px 25px rgba(255, 255, 255, 0.2);}
+
+.cardFav .card-body{
+    padding: 0 0 0 10px;
+    color: black;
+}
+
+#favorites{
+    background-color:rgb(16, 69, 63);
+    padding-top: 5px;
+    color: white;
+    border-radius: 5px;
+    height: 100%;
+    min-height: 100px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1025px) {
+    .login p{
+        display: none;
+    }
+    .login i{
+        position: absolute;
+        right: 80px;
+    }
+    .searchBar{width: 90%;}
+    .searchBar #search{width: 90%;}
+}
+
+@media screen and (width: 1024px){
+    .login i{
+        display: none;
+    }
+    .searchBar{width: 90%;}
+    .searchBar #search{width: 85%!important;}
+    .box select {width: 60%;}
+}
+
+@media screen and (max-width: 1023px) and (min-width: 992px) {
+    .login i{
+        display: none;
+    }
+    .fav{display: none;}
+    .searchBar{width: 90%;}
+    .searchBar #search{width: 85%!important;}
+    .box select {width: 60%;}
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .login i{
+        display: none;
+    }
+    .fav{display: none;}
+    .box{display: none;}
+    .searchBar{width: 100%;}
+    .searchBar #search{width: 90%!important;}
+}
+
+@media screen  and (max-width: 767px) {
+    .fav{display: none;}
+    .login i{
+        display: none;
+    }
+    .box{display: none;}
+    .searchBar{width: 100%;}
+    .searchBar #search{width: 80%!important;}
+}

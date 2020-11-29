@@ -1,0 +1,84 @@
+body{font-family:'Courier New', Courier, monospace;}
+
+.menu1 a{
+    color: white;
+    margin: 10px;
+    font-family:'Courier New', Courier, monospace;
+    align-items: center;
+}
+
+.logo{ max-width: 150px;}
+
+.footer{
+    color: white;
+    padding: 5px;
+    background-color: rgb(17, 29, 57);
+    align-content: center;
+    align-items: center;
+}
+
+.footer img{
+    max-height: 50px;
+    position: center;  
+}
+
+header{background-color: rgb(16, 69, 63);}
+
+header a{color: white;}
+
+.logo{width: 150px;}
+
+.menu-icone{width: 50px;}
+
+.imgDivul{
+    float: left;
+    margin: 10px;
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+.title {text-align: center;}
+
+/* Media Queries */
+
+@media screen and (min-width: 1025px) {
+    .login p{
+        display: none;
+    }
+    .login i{
+        position: absolute;
+        right: 80px;
+    }
+}
+
+@media screen and (width: 1024px){
+    .login i{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 992px) {
+    .login i{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .login i{
+        display: none;
+    }
+
+}
+
+@media screen  and (max-width: 767px) {
+    .login i{
+        display: none;
+    }
+    .imgDivul{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
