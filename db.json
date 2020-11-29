@@ -33,13 +33,13 @@
       "id": 1,
       "username": "adminEmpresa",
       "password": "adminEmpresa",
-      "type": "empresa"
+      "type": "2"
     },
     {
       "id": 2,
       "username": "adminUser",
       "password": "adminUser",
-      "type": "user"
+      "type": "1"
     }
   ]
 }
