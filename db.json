@@ -43,25 +43,23 @@
     }
   ],
   "userdata": [
-    [
-      {
-        "id": 2,
-        "username": "adminUser",
-        "nome": "Comum administrativo",
-        "email": "Comum@doors.com",
-        "desc": "Conta da usuário comum do doors apenas para testes",
-        "tipo": 1
-      }
-    ],
-    [
-      {
-        "id": 1,
-        "username": "adminEmpresa",
-        "nome": "Empresarial administrativo",
-        "email": "empresarial@doors.com",
-        "desc": "Conta de empresa do doors apenas para testes",
-        "tipo": 2
-      }
-    ]
+    {
+      "id": 2,
+      "username": "adminUser",
+      "nome": "Comum administrativo",
+      "email": "Comum@doors.com",
+      "desc": "Conta da usuário comum do doors apenas para testes",
+      "tipo": 1
+    }
+  ],
+  "empredata": [
+    {
+      "id": 1,
+      "username": "adminEmpresa",
+      "nome": "Empresarial administrativo",
+      "email": "empresarial@doors.com",
+      "desc": "Conta de empresa do doors apenas para testes",
+      "tipo": 2
+    }
   ]
 }
