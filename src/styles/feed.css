@@ -17,6 +17,23 @@ body{font-family:'Courier New', Courier, monospace;}
     align-items: center;
 }
 
+.main{position: relative; min-height: 200px;}
+
+.loginMsg{
+    display: inline-block;
+    position: absolute;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px rgb(16, 69, 63) solid;
+    background-color: rgba(16, 69, 63, 0.438);
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
 .footer img{
     max-height: 50px;
     position: center;  

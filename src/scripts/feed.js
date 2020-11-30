@@ -73,28 +73,24 @@ function refreshFeed() {
     let box = ``;
     for (x = vagas.length - 1; x >= 0; x--) {
         let newsFeed = document.getElementById('newsFeed');
-        box+= newsFeedBox(vagas[x].img, vagas[x].title, vagas[x].desc, vagas[x].id);
+        box += newsFeedBox(vagas[x].img, vagas[x].title, vagas[x].desc, vagas[x].id);
         newsFeed.innerHTML = box;
     }
     addEventFav();
 }
 
-function refreshFavs ()
-{
+function refreshFavs() {
     let favs = [];
     let encontrado = false;
     let y = 0;
     favs = JSON.parse(localStorage.getItem("Favoritos"));//vagas.indexOf(favs[0].toString(10))
     console.log('dentro ref ', vagas);
     let box = `<h5>Oportunidades Favoritas</h5>`;
-    for(i = 0; i < favs.length; i++)
-    {
+    for (i = 0; i < favs.length; i++) {
         y = 0;
         encontrado = false;
-        while(!encontrado && y < vagas.length)
-        {
-            if(vagas[y].id == favs[i])
-            {
+        while (!encontrado && y < vagas.length) {
+            if (vagas[y].id == favs[i]) {
                 encontrado = true;
                 box += favoritesBox(vagas[y].img, vagas[y].title, vagas[y].id);
             }
@@ -142,31 +138,40 @@ function searchResult() {
 
 window.onload = () => {
 
-    getData();
-    $("#filtro").change(function () {
-        let box = ``;
-        if (filtro.value == "") {
-            //iniciar repetição
-            for (x = 0; x <= vagas.length - 1; x++) {
-                box+= newsFeedBox(vagas[x].img, vagas[x].title, vagas[x].desc, vagas[x].id);
-                newsFeed.innerHTML = box;
-            }//fim do for
+    if (localStorage.getItem("statusLogin") != "1" && localStorage.getItem("statusLogin") != "2" &&
+        sessionStorage.getItem("statusLogin") != "1" && sessionStorage.getItem("statusLogin") != "2") {
+        $(".main").html(`<div class="col-sm-12">
+                            <p class="loginMsg">Parece que você não está logado. <br>Tente <a href="../src/login.html">logar</a>
+                            </p>
+                        </div>`);
+    }else {
 
-        }//fim do if
-        else {
-            //iniciar repetição
+        getData();
+        $("#filtro").change(function () {
             let box = ``;
-            for (x = 0; x <= vagas.length - 1; x++) {
-                if (filtro.value == vagas[x].cat) {
-                    box+= newsFeedBox(vagas[x].img, vagas[x].title, vagas[x].desc, vagas[x].id);
+            if (filtro.value == "") {
+                //iniciar repetição
+                for (x = 0; x <= vagas.length - 1; x++) {
+                    box += newsFeedBox(vagas[x].img, vagas[x].title, vagas[x].desc, vagas[x].id);
                     newsFeed.innerHTML = box;
-                }//fim do if
-            }//fim  do for
-        }
-    });
+                }//fim do for
 
-    $("#search").change(() => {
-        searchResult()
+            }//fim do if
+            else {
+                //iniciar repetição
+                let box = ``;
+                for (x = 0; x <= vagas.length - 1; x++) {
+                    if (filtro.value == vagas[x].cat) {
+                        box += newsFeedBox(vagas[x].img, vagas[x].title, vagas[x].desc, vagas[x].id);
+                        newsFeed.innerHTML = box;
+                    }//fim do if
+                }//fim  do for
+            }
+        });
+
+        $("#search").change(() => {
+            searchResult()
+        }
+        );
     }
-    );
 }

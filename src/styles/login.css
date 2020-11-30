@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+.erro{
+    background-color: rgb(250, 176, 176);
+    color: rgb(177, 1, 1);
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+html,body{
+background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.card-header h3{
+color: white;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: rgb(33, 97, 89);
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+a{color: rgb(0, 162, 255)!important;}
+
+.login_btn{
+color: black;
+background-color: rgb(33, 97, 89);
+width: 120px;
+}
+
+.login_btn:hover{
+color: white    ;
+background-color: rgb(20, 53, 49);
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+.fa-chevron-left{
+    color: white;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid white;
+}
