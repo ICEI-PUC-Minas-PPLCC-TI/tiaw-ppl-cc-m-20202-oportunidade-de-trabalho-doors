@@ -140,12 +140,13 @@ window.onload = () => {
 
     if (localStorage.getItem("statusLogin") != "1" && localStorage.getItem("statusLogin") != "2" &&
         sessionStorage.getItem("statusLogin") != "1" && sessionStorage.getItem("statusLogin") != "2") {
+            console.log("1");
         $(".main").html(`<div class="col-sm-12">
                             <p class="loginMsg">Parece que você não está logado. <br>Tente <a href="../src/login.html">logar</a>
                             </p>
                         </div>`);
     }else {
-
+        console.log("2");
         getData();
         $("#filtro").change(function () {
             let box = ``;
