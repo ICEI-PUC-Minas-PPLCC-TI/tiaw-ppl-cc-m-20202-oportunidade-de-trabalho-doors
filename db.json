@@ -44,7 +44,8 @@
   ],
   "userdata": [
     {
-      "id": 2,
+      "id": 1,
+      "userid": 2,
       "username": "adminUser",
       "nome": "Comum administrativo",
       "email": "Comum@doors.com",
@@ -55,6 +56,7 @@
   "empredata": [
     {
       "id": 1,
+      "userid": 1,
       "username": "adminEmpresa",
       "nome": "Empresarial administrativo",
       "email": "empresarial@doors.com",
