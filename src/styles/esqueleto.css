@@ -39,34 +39,29 @@ header a{color: white;}
 
 .title {text-align: center;}
 
-/* Media Queries */
-
-@media screen and (min-width: 1025px) {
-    .login p{
-        display: none;
-    }
-    .login i{
-        position: absolute;
-        right: 80px;
-    }
+.login{
+    position: absolute;
+    right: 80px;
 }
 
-@media screen and (width: 1024px){
-    .login i{
-        display: none;
-    }
+/* Media Queries */
+
+@media screen and (min-width: 1024px) {
+    li .responsivo{display: none;}
 }
 
 @media screen and (max-width: 1023px) and (min-width: 992px) {
     .login i{
         display: none;
     }
+    li .responsivo{display: block;}
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
     .login i{
         display: none;
     }
+    li .responsivo{display: block;}
 
 }
 
@@ -74,6 +69,7 @@ header a{color: white;}
     .login i{
         display: none;
     }
+    li .responsivo{display: block;}
     .imgDivul{
         float: none;
         display: block;

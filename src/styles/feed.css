@@ -130,24 +130,21 @@ header a{color: white;}
     min-height: 100px;
 }
 
+.login{
+    position: absolute;
+    right: 80px;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 1025px) {
-    .login p{
-        display: none;
-    }
-    .login i{
-        position: absolute;
-        right: 80px;
-    }
+    li .responsivo{display: none;}
     .searchBar{width: 90%;}
     .searchBar #search{width: 90%;}
 }
 
 @media screen and (width: 1024px){
-    .login i{
-        display: none;
-    }
+    li .responsivo{display: none;}
     .searchBar{width: 90%;}
     .searchBar #search{width: 85%!important;}
     .box select {width: 60%;}
@@ -157,6 +154,7 @@ header a{color: white;}
     .login i{
         display: none;
     }
+    li .responsivo{display: block;}
     .fav{display: none;}
     .searchBar{width: 90%;}
     .searchBar #search{width: 85%!important;}
@@ -167,6 +165,7 @@ header a{color: white;}
     .login i{
         display: none;
     }
+    li .responsivo{display: block;}
     .fav{display: none;}
     .box{display: none;}
     .searchBar{width: 100%;}
@@ -178,6 +177,7 @@ header a{color: white;}
     .login i{
         display: none;
     }
+    li .responsivo{display: block;}
     .box{display: none;}
     .searchBar{width: 100%;}
     .searchBar #search{width: 80%!important;}
