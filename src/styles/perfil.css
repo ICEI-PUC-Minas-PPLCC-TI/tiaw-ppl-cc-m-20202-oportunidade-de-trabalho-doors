@@ -1,0 +1,144 @@
+.main{margin: 20px;}
+
+body{font-family:'Courier New', Courier, monospace;}
+
+.logo{ max-width: 150px;}
+
+.header{background-color: rgb(167, 42, 42);}
+
+.footer{
+    color: white;
+    padding: 5px;
+    background-color: rgb(17, 29, 57);
+    align-content: center;
+    align-items: center;
+}
+
+.footer img{
+    max-height: 50px;
+    position: center;  
+}
+
+header{background-color: rgb(16, 69, 63);}
+
+header a{color: white;}
+
+.logo{width: 150px;}
+
+.menu-icone{width: 50px;}
+
+.login{
+    position: absolute;
+    right: 80px;
+}
+
+main{margin-top: 15px;}
+
+.type{
+    text-align: right;
+    border: solid 1px rgb(165, 165, 165);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.opcoes h2{text-align: center;}
+
+.opcoes{
+    border: solid 1px rgb(165, 165, 165);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.nome{
+    text-align: center;
+    font-size: max(2vw, 20px);
+}
+
+.profile{
+    border: solid 1px rgb(165, 165, 165);
+    margin: 0px 0px 10px 0px;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 200px;
+    position: relative;
+}
+
+.imgPerfil{
+    border-radius: 50%;
+    margin-bottom: 15px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.loginMsg{
+    display: inline-block;
+    position: absolute;
+    padding: 30px;
+    border-radius: 5px;
+    border: 1px rgb(16, 69, 63) solid;
+    background-color: rgba(16, 69, 63, 0.438);
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.profile input {width: 100%;}
+.profile textarea {
+    width: 100%;
+    min-height: 30vh;
+    padding: 10px;
+}
+.profile button{margin: 10px;float: right;}
+
+.erro{
+    background-color: rgb(250, 176, 176);
+    color: rgb(177, 1, 1);
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+}   
+
+/* Media Queries */
+
+@media screen and (min-width: 1024px) {
+    li .responsivo{display: none;}
+}
+
+@media screen and (max-width: 1023px) and (min-width: 992px) {
+    .login i{
+        display: none;
+    }
+    li .responsivo{display: block;}
+}
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    .login i{
+        display: none;
+    }
+    li .responsivo{display: block;}
+
+}
+
+@media screen  and (max-width: 767px) {
+    .login i{
+        display: none;
+    }
+    li .responsivo{display: block;}
+    .imgPerfil{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}

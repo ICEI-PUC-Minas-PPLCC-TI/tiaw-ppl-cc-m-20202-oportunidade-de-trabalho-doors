@@ -50,11 +50,11 @@ function prepCabecalho() {
                 </div>`;
     } else {
         document.querySelector(".navConect").innerHTML = 
-                `<a class="nav-link responsivo" href="#">Meu perfil</a>
-                <a class="nav-link responsivo" href="#">Desconectar</a>`;
+                `<a class="nav-link responsivo" href="../src/perfil.html">Meu perfil</a>
+                <a class="nav-link responsivo" href="#" onclick="Desconect()">Desconectar</a>`;
         document.querySelector(".login .dropdown").innerHTML = 
                 `<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Meu perfil</a>
+                    <a class="dropdown-item" href="../src/perfil.html">Meu perfil</a>
                     <a class="dropdown-item" href="#" onclick="Desconect()">Desconectar</a>
                 </div>`;
     }

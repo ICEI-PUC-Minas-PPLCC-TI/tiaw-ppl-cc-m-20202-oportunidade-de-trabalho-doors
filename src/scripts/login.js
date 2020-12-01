@@ -1,5 +1,14 @@
 const urlUser = "https://tiawdoors-api.herokuapp.com/user";
 
+function perfil(id, username, n, email, desc, t) {
+    this.userid = id;
+    this.username = username;
+    this.nome = n;
+    this.email = email;
+    this.desc = desc;
+    this.tipo = t;
+}
+
 function getUser(userName, senha) {
     $.ajax({
         url: urlUser + "?username=" + userName,
@@ -29,6 +38,8 @@ function getUser(userName, senha) {
 
 function registerUser(userName, senha, empresarial) {
     let type = empresarial ? "2" : "1";
+    let userType = empresarial ? "empredata" : "userdata";
+    console.log(userType);
 
     let content = `{"username": "${userName}",
                     "password": "${senha}",
@@ -54,7 +65,15 @@ function registerUser(userName, senha, empresarial) {
                     sessionStorage.setItem("statusLogin", data.type);
                     sessionStorage.setItem("userId", data.id);
                 }
-
+                let conta = new perfil (data.id, userName, "Nome não definido",
+                "Email não definido", "Descrição não definida", data.type);
+                $.ajax({
+                    type: "POST",
+                    url: "https://tiawdoors-api.herokuapp.com/" + userType ,
+                    data: conta
+                }).done((data) => {
+                    console.log(data);
+                });
                 window.location.replace("../src/feed.html")
             });
         }
