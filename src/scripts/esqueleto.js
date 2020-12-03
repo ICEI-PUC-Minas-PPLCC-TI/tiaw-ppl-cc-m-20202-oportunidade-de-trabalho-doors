@@ -33,7 +33,7 @@ const urlEmpre ="https://tiawdoors-api.herokuapp.com/empredata";
 var vagas = [];
 var owner = [];
 
-function mainText (desc, requis, ben, sal, cat, email, owner)
+function mainText (desc, requis, ben, sal, cat, email, owner, ownerDesc)
 {
     let box =`${desc}<br>
     <strong>Requisitos:</strong> ${requis}
@@ -41,6 +41,7 @@ function mainText (desc, requis, ben, sal, cat, email, owner)
     <br><strong>Salário:</strong> ${sal}
     <br><strong>Categoria:</strong> ${cat}
     <br><strong>Empresa:</strong> ${owner}  
+    <br><strong>Sobre a empresa:</strong> ${ownerDesc} 
     <br><strong>Quer contatar a empresa?</strong> o e-mail deles é ${email}`;
     return box;
 }
@@ -71,7 +72,7 @@ function loadVaga()
     $("#title").html(vagas[0].title);
     $(".imgDivul").attr("src", vagas[0].img);
     $("#corpo").html(mainText(vagas[0].desc, vagas[0].requis, vagas[0].ben, vagas[0].sal, vagas[0].cat, 
-        owner[0].email, owner[0].nome));
+        owner[0].email, owner[0].nome, owner[0].desc));
 }
 
 window.onload = () => {
