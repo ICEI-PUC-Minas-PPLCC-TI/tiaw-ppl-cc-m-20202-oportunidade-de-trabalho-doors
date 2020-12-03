@@ -7,7 +7,10 @@
       "desc": "Procura-se estagiário URGENTEMENTE, que tenha experiência com HTML5, CSS3, Javascript e, que preferencialmente.",
       "ben": "Vaga de estacionamento na empresa, auxílio transporte.",
       "requis": "Preferencialmente já esteja no terceiro período ou períodos subsequentes",
-      "sal": "A discutir"
+      "sal": "A discutir",
+      "cat": "Ciência da Computação",
+      "email": "empresarial@doors.com",
+      "owner": "Empresarial administrativo"
     },
     {
       "id": 2,
@@ -16,7 +19,10 @@
       "desc": "Precisamos de um estagiário para aumentar o controle interno do shopping. Com as mudanças de logística trazidas pela pandemia tivemos que atualizar nosso sistema, portanto o quão antes o candidato puder começar melhor",
       "ben": "Vale transporte, vale alimentação e plano de saúde Unimed",
       "requis": "Estar cursando adminsitração",
-      "sal": "R$1000,00"
+      "sal": "R$1000,00",
+      "cat": "Administração",
+      "email": "empresarial@doors.com",
+      "owner": "Empresarial administrativo"
     },
     {
       "id": 3,
@@ -25,7 +31,10 @@
       "desc": "Somos uma empresa consolidada na área de produção de calçados. Estamos interessado em um estagiário que esteja disponível para começar no próximo mês e que tenha interesse na área de otimização da linha de produção.",
       "ben": "Refeições cobertas pela empresa. Auxílio transporte. Desconto em abastecimento no posto perto da fábrica.",
       "requis": "Estar entre o 4° e 8° período do curso de engenharia de produção, automação ou mecânica.",
-      "sal": "R$800,00"
+      "sal": "R$800,00",
+      "cat": "Engenharia de produção",
+      "email": "empresarial@doors.com",
+      "owner": "Empresarial administrativo"
     }
   ],
   "user": [
