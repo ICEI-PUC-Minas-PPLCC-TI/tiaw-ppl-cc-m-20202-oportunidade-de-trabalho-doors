@@ -2,6 +2,7 @@ var accountType;
 var accountId;
 const url = "https://tiawdoors-api.herokuapp.com/";
 var personalInfo = [];
+var myVagas = [];
 
 function perfil(id, username, n, email, desc, t) {
     this.userid = id;
@@ -12,7 +13,7 @@ function perfil(id, username, n, email, desc, t) {
     this.tipo = t;
 }
 
-function newsFeedBox(img, title, desc, ben, requis, sal, cat) {
+function newsFeedBox(img, title, desc, ben, requis, sal, cat, ownerId) {
     this.img = img;
     this.title = title;
     this.desc = desc;
@@ -20,6 +21,7 @@ function newsFeedBox(img, title, desc, ben, requis, sal, cat) {
     this.requis = requis;
     this.sal = sal;
     this.cat = cat;
+    this.ownerID = ownerId;
 }
 
 function prepCabecalho() {
@@ -56,7 +58,6 @@ function getData() {
         url: url + accountType + '?userid=' + accountId,
     })
         .done(function (data) {
-            console.log(data);
             personalInfo = data;
             montarPerfil();
             (accountType == "userdata") ? opcoesComun() : opcoesEmpr();
@@ -65,7 +66,8 @@ function getData() {
 
 function opcoesEmpr() {
     $("#opcoes").html(` <span onclick="infoUser()">Editar informações</span><br>
-                        <span onclick="addVaga()">Adicionar vaga</span><br>
+                        <span onclick="addVaga()">Adicionar vagas</span><br>
+                        <span onclick="getVaga()">Minhas vagas</span><br>
                         <span onclick="editLog()">Editar login</span>`);
 }
 
@@ -137,6 +139,124 @@ function addVaga() {
 </form>`);
 }
 
+function getVaga() {
+    $.ajax({
+        url: url + "Vagas?ownerID=" + accountId,
+    })
+        .done(function (data) {
+            myVagas = data;
+            let box = `<div class= "col-12">`;
+            for (i = 0; i < myVagas.length; i++) {
+                box += `<li><span>${myVagas[i].title}</span>
+                <i class="fas fa-edit" onclick="editVaga(${i})"></i>
+                <i class="fas fa-trash" onclick="deleteVaga(${myVagas[i].id})"></i>
+                </li>`;
+            }
+            box += `</div>`;
+            $("#profile").html(box);
+        });
+}
+
+function editVaga(index) {
+    $("#profile").html(`<form id="register" method="post" class="formulario col-12">
+    <div class="row">
+        <h3>Editar a vaga</h3>
+        <div class="col-12">
+        <span id="instrucoes"></span>
+            <p>
+                <label for="titleForm">Titulo:</label>
+                <input type="text" id="titleForm" name="titleForm" autocomplete="off"
+                    placeholder="${myVagas[index].title}" />
+            </p>
+        </div>
+        <div class="col-12">
+            <p>
+                <label for="descForm">Descrição:</label>
+                <textarea id="descForm" name="descForm">${myVagas[index].desc}</textarea>
+            </p>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p>
+                <label for="benForm">Benefícios:</label>
+                <textarea id="benForm" name="benForm"> ${myVagas[index].ben}</textarea>
+            </p>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p>
+                <label for="requisForm">Requisitos:</label>
+                <textarea id="requisForm" name="requisForm" > ${myVagas[index].requis}</textarea>
+            </p>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p>
+                <label for="imgForm">Imagem:</label>
+                <input type="text" id="imgForm" name="imgForm" autocomplete="off"
+                    placeholder=" ${myVagas[index].img}" />
+            </p>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p>
+                <label for="salForm">Salário ofertado:</label>
+                <input type="text" id="salForm" name="salForm" autocomplete="off"
+                placeholder=" ${myVagas[index].sal}" />
+            </p>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p>
+                <label for="catForm">Categorias:</label>
+                <select id="catForm" name="filtro">
+                    <option value=""></option>
+                    <option value="Engenharia de produção">Engenharia de produção</option>
+                    <option value="Jornalismo">Jornalismo</option>
+                    <option value="Direito">Direito</option>
+                    <option value="Letras">Letras</option>
+                    <option value="Ciência da Computação">Ciência da Computação</option>
+                    <option value="Administração">Administração</option>
+                </select>
+            </p>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-success" onclick="putVaga(${myVagas[index].id}, ${index})">Salvar</button>
+</form>`);
+}
+
+function putVaga(id, index) {
+    let info = new newsFeedBox(imgForm.value, titleForm.value, descForm.value, benForm.value,
+        requisForm.value, salForm.value, catForm.value, personalInfo[0].userid);
+    
+    if(info.cat.length <= 0)
+        info.cat = myVagas[index].cat;
+    if(info.img.length <= 0)
+        info.img = myVagas[index].img;
+    if(info.sal.length <= 0)
+        info.sal = myVagas[index].sal;
+    if(info.title.length <= 0)
+        info.title = myVagas[index].title;
+
+    instrucoes.innerHTML = "";
+    instrucoes.classList.remove("erro");
+    console.log(info);
+
+    $.ajax({
+        url: url + "Vagas/" +id,
+        type: 'put',
+        data: info
+    }).done(() => {
+        location = location;
+    });
+
+}
+
+function deleteVaga(id){
+    $.ajax({
+        url: url + "Vagas/" +id,
+        type: 'DELETE',
+    }).done(() => {
+        location = location;
+    });
+}
+
 function postVaga() {
     if (imgForm.value.length == 0 ||
         titleForm.value.length == 0 ||
@@ -152,7 +272,7 @@ function postVaga() {
     } else {
 
         let info = new newsFeedBox(imgForm.value, titleForm.value, descForm.value, benForm.value,
-            requisForm.value, salForm.value, catForm.value);
+            requisForm.value, salForm.value, catForm.value, personalInfo[0].userid);
         instrucoes.innerHTML = "";
         instrucoes.classList.remove("erro");
 
@@ -186,8 +306,6 @@ function infoUser() {
 }
 
 function postUserdata() {
-    console.log($("#nomeUser").val().length);
-    console.log($("#emailUser").val().length);
     if ($("#nomeUser").val().length > 0) {
         personalInfo[0].nome = $("#nomeUser").val();
     }

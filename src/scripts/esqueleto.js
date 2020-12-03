@@ -29,15 +29,19 @@ function Desconect(){
 
 const pageID = window.location.href.split("?id=")[1];
 const urlVagas = "https://tiawdoors-api.herokuapp.com/Vagas";
+const urlEmpre ="https://tiawdoors-api.herokuapp.com/empredata";
 var vagas = [];
+var owner = [];
 
-function mainText (desc, requis, ben, sal, cat)
+function mainText (desc, requis, ben, sal, cat, email, owner)
 {
     let box =`${desc}<br>
     <strong>Requisitos:</strong> ${requis}
     <br><strong>Beneficios:</strong> ${ben}
-    <br><strong>Salário:</strong>${sal}
-    <br><strong>Categoria:</strong>${cat} `;
+    <br><strong>Salário:</strong> ${sal}
+    <br><strong>Categoria:</strong> ${cat}
+    <br><strong>Empresa:</strong> ${owner}  
+    <br><strong>Quer contatar a empresa?</strong> o e-mail deles é ${email}`;
     return box;
 }
 
@@ -47,7 +51,17 @@ function getData(id) {
     })
         .done(function (data) {
             vagas = data;
-            console.log(vagas);
+            getOwner(vagas[0].ownerID);
+        });
+}
+
+function getOwner(id)
+{
+    $.ajax({
+        url: urlEmpre + "?userid=" +id,
+    })
+        .done(function (data) {
+            owner = data;
             loadVaga();
         });
 }
@@ -56,7 +70,8 @@ function loadVaga()
 {
     $("#title").html(vagas[0].title);
     $(".imgDivul").attr("src", vagas[0].img);
-    $("#corpo").html(mainText(vagas[0].desc, vagas[0].requis, vagas[0].ben, vagas[0].sal, vagas[0].cat));
+    $("#corpo").html(mainText(vagas[0].desc, vagas[0].requis, vagas[0].ben, vagas[0].sal, vagas[0].cat, 
+        owner[0].email, owner[0].nome));
 }
 
 window.onload = () => {

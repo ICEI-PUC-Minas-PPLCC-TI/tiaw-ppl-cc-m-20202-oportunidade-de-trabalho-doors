@@ -1,8 +1,25 @@
-function newsFeedBox(img, title, desc, id) {
-    let favs = [];
-    favs = JSON.parse(localStorage.getItem("Favoritos"));
+if (localStorage.getItem("statusLogin") != 1 && localStorage.getItem("statusLogin") != 2) {
+    var statusLogin = sessionStorage.getItem("statusLogin");
+    var accountId = sessionStorage.getItem("userId");
+}
+else {
+    var statusLogin = localStorage.getItem("statusLogin");
+    var accountId = localStorage.getItem("userId");
+}
 
-    let icone = (favs.indexOf(id.toString(10)) < 0) ? "far" : "fas";
+function newsFeedBox(img, title, desc, id) {
+
+    let dados = JSON.parse(localStorage.getItem("Favoritos"));
+    let pos = 0;
+
+    for (j = 0; j < dados.length; j++) {
+        if (dados[j].userId == accountId) {
+            pos = j;
+            break;
+        }
+    }
+
+    let icone = (dados[pos].favs.indexOf(id.toString(10)) < 0) ? "far" : "fas";
     let box = `<div class="card mb-3 col-12">
                     <div class="row no-gutters">
                         <div class="col-md-4">
@@ -20,6 +37,11 @@ function newsFeedBox(img, title, desc, id) {
                     </div>
                 </div>`
     return box;
+}
+
+function fav(i, fav) {
+    this.userId = i;
+    this.favs = fav
 }
 
 function favoritesBox(img, title, id) {
@@ -40,27 +62,26 @@ function favoritesBox(img, title, id) {
 }
 
 function prepCabecalho() {
-    if (localStorage.getItem("statusLogin") != "1" && localStorage.getItem("statusLogin") != "2" &&
-        sessionStorage.getItem("statusLogin") != "1" && sessionStorage.getItem("statusLogin") != "2") {
-        document.querySelector(".navConect").innerHTML = 
-                `<a class="nav-link responsivo" href="../src/login.html">Conectar</a>`;
-        document.querySelector(".login .dropdown").innerHTML = 
-                `<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+    if (statusLogin != "1" && statusLogin != "2") {
+        document.querySelector(".navConect").innerHTML =
+            `<a class="nav-link responsivo" href="../src/login.html">Conectar</a>`;
+        document.querySelector(".login .dropdown").innerHTML =
+            `<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="../src/login.html">Conectar</a>
                 </div>`;
     } else {
-        document.querySelector(".navConect").innerHTML = 
-                `<a class="nav-link responsivo" href="../src/perfil.html">Meu perfil</a>
+        document.querySelector(".navConect").innerHTML =
+            `<a class="nav-link responsivo" href="../src/perfil.html">Meu perfil</a>
                 <a class="nav-link responsivo" href="#" onclick="Desconect()">Desconectar</a>`;
-        document.querySelector(".login .dropdown").innerHTML = 
-                `<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+        document.querySelector(".login .dropdown").innerHTML =
+            `<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="../src/perfil.html">Meu perfil</a>
                     <a class="dropdown-item" href="#" onclick="Desconect()">Desconectar</a>
                 </div>`;
     }
 }
 
-function Desconect(){
+function Desconect() {
     localStorage.setItem("statusLogin", "0");
     sessionStorage.setItem("statusLogin", "0");
     localStorage.setItem("userId", "0");
@@ -69,10 +90,10 @@ function Desconect(){
 }
 
 if (localStorage.getItem("Favoritos") == null) {
-    localStorage.setItem("Favoritos", "[]");
+    localStorage.setItem("Favoritos", JSON.stringify([new fav(accountId, [])]));
 }
+
 const urlVagas = "https://tiawdoors-api.herokuapp.com/Vagas";
-let xhr = new XMLHttpRequest();
 var vagas = [];
 
 function getData() {
@@ -109,17 +130,29 @@ function refreshFeed() {
 }
 
 function refreshFavs() {
-    let favs = [];
     let encontrado = false;
     let y = 0;
-    favs = JSON.parse(localStorage.getItem("Favoritos"));//vagas.indexOf(favs[0].toString(10))
-    console.log('dentro ref ', vagas);
+
+    let dados = JSON.parse(localStorage.getItem("Favoritos"));
+    let pos = 0;
+
+    for (j = 0; j < dados.length; j++) {
+        if (dados[j].userId == accountId) {
+            pos = j;
+            break;
+        } else if (j == dados.length - 1) {
+            pos = dados.length;
+            dados.push(new fav(accountId, []));
+        }
+    }
+
     let box = `<h5>Oportunidades Favoritas</h5>`;
-    for (i = 0; i < favs.length; i++) {
+
+    for (i = 0; i < dados[pos].favs.length; i++) {
         y = 0;
         encontrado = false;
         while (!encontrado && y < vagas.length) {
-            if (vagas[y].id == favs[i]) {
+            if (vagas[y].id ==  dados[pos].favs[i]) {
                 encontrado = true;
                 box += favoritesBox(vagas[y].img, vagas[y].title, vagas[y].id);
             }
@@ -134,19 +167,31 @@ function addEventFav() {
     document.querySelectorAll(".favIcon").forEach((i) => {
         i.addEventListener("click",
             () => {
-                let favs = [];
                 i.classList.toggle("fas");
                 i.classList.toggle("far");
-                id = i.parentElement.firstChild.nextSibling.innerText;
-                favs = JSON.parse(localStorage.getItem("Favoritos"));
 
+                id = i.parentElement.firstChild.nextSibling.innerText;
+
+                let dados = JSON.parse(localStorage.getItem("Favoritos"));
+                let pos = 0;
+
+                for (j = 0; j < dados.length; j++) {
+                    if (dados[j].userId == accountId) {
+                        pos = j;
+                        break;
+                    } else if (j == dados.length - 1) {
+                        pos = dados.length;
+                        dados.push(new fav(accountId, []));
+                    }
+                }
+                
                 if (i.classList.contains("fas")) {
-                    favs.push(id);
-                    localStorage.setItem("Favoritos", JSON.stringify(favs));
+                    dados[pos].favs.push(id);
+                    localStorage.setItem("Favoritos", JSON.stringify(dados));
                 }
                 else {
-                    favs.splice(favs.indexOf(id), 1);
-                    localStorage.setItem("Favoritos", JSON.stringify(favs));
+                    dados[pos].favs.splice(dados[pos].favs.indexOf(id), 1);
+                    localStorage.setItem("Favoritos", JSON.stringify(dados));
                 }
                 refreshFavs();
             }, false);
@@ -166,16 +211,14 @@ function searchResult() {
 }
 
 window.onload = () => {
-
     prepCabecalho();
 
-    if (localStorage.getItem("statusLogin") != "1" && localStorage.getItem("statusLogin") != "2" &&
-        sessionStorage.getItem("statusLogin") != "1" && sessionStorage.getItem("statusLogin") != "2") {
+    if (statusLogin != "1" && statusLogin != "2") {
         $(".main").html(`<div class="col-sm-12">
                             <p class="loginMsg">Parece que você não está logado. <br>Tente <a href="../src/login.html">logar</a>
                             </p>
                         </div>`);
-    }else {
+    } else {
         getData();
         $("#filtro").change(function () {
             let box = ``;
