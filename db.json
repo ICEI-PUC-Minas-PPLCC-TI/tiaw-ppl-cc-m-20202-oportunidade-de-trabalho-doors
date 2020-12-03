@@ -9,8 +9,7 @@
       "requis": "Preferencialmente já esteja no terceiro período ou períodos subsequentes",
       "sal": "A discutir",
       "cat": "Ciência da Computação",
-      "email": "empresarial@doors.com",
-      "owner": "Empresarial administrativo"
+      "ownerID": "1"
     },
     {
       "id": 2,
@@ -21,8 +20,7 @@
       "requis": "Estar cursando adminsitração",
       "sal": "R$1000,00",
       "cat": "Administração",
-      "email": "empresarial@doors.com",
-      "owner": "Empresarial administrativo"
+      "ownerID": "1"
     },
     {
       "id": 3,
@@ -33,8 +31,7 @@
       "requis": "Estar entre o 4° e 8° período do curso de engenharia de produção, automação ou mecânica.",
       "sal": "R$800,00",
       "cat": "Engenharia de produção",
-      "email": "empresarial@doors.com",
-      "owner": "Empresarial administrativo"
+      "ownerID": "1"
     }
   ],
   "user": [
