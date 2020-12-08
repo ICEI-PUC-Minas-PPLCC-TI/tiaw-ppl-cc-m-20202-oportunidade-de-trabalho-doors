@@ -122,14 +122,14 @@ body{background-color: rgba(17, 29, 57, 0);}
 
 .but
 {
-    background-color:rgba(0, 0, 0, 0.486) ;
-    border: solid black 2px;
+    background-color:rgba(0, 0, 0, 0.548) ;
+    border: solid rgba(0, 0, 0, 0.616) 2px;
 }
 
 .but:hover
 {
-    background-color: rgba(255, 255, 255, 0.438);
-    border: solid black 2px;
+    background-color: rgba(55, 55, 55, 0.304);
+    border: solid rgba(55, 55, 55, 0.304) 2px;
 }
 
 .login{
@@ -167,4 +167,9 @@ body{background-color: rgba(17, 29, 57, 0);}
         margin-top: 0px;
         margin-bottom: 0px;
     }
+}
+#BtnButon
+{
+    color: white;
+    text-decoration: none;
 }
