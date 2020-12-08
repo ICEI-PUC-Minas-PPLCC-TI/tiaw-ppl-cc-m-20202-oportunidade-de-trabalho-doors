@@ -73,9 +73,7 @@ html
     background-size: cover
 }
 
-body{
-    background-color: rgba(17, 29, 57, 0);
-}
+body{background-color: rgba(17, 29, 57, 0);}
 
 .sub
 {
@@ -134,22 +132,22 @@ body{
     border: solid black 2px;
 }
 
+.login{
+    position: absolute;
+    right: 80px;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 1024px) {
-    .login p{
-        display: none;
-    }
-    .login i{
-        position: absolute;
-        right: 80px;
-    }
+    li .responsivo{display: none;}
 }
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
     .login i{
         display: none;
     }
+    li .responsivo{display: block;}
     .primeira{
         margin-top: 0px;
         margin-bottom: 0px;
@@ -157,7 +155,11 @@ body{
     
 }
 
-@media screen  and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+    .login i{
+        display: none;
+    }
+    li .responsivo{display: block;}
     .carousel-inner {
         width: 100%;
     }
