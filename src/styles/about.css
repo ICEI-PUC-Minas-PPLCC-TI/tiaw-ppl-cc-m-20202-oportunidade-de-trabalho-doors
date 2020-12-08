@@ -1,0 +1,213 @@
+.main{margin: 20px;}
+
+body{font-family:'Courier New', Courier, monospace;}
+
+.menu1 a{
+     color: white;
+    margin: 10px;
+    font-family:'Courier New', Courier, monospace;
+    align-items: center;
+}
+
+.logo{ max-width: 150px;}
+
+.header{background-color: rgb(167, 42, 42);}
+
+.footer{
+    color: white;
+    padding: 5px;
+    background-color: rgb(17, 29, 57);
+    align-content: center;
+    align-items: center;
+}
+
+.footer img{
+    max-height: 50px;
+    position: center;  
+}
+
+header{background-color: rgb(16, 69, 63);}
+
+.main h2 {
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.main p {
+    padding-top: 2%;
+}
+
+.main .cards {
+    padding-top: 2%;
+}
+
+header a{color: white;}
+
+.logo{width: 150px;}
+
+.menu-icone{width: 50px;}
+
+/*  Corpo */
+
+.main h1 {
+    text-align: center;
+    border-radius: 5px;
+    border: solid black 2px;
+}
+
+.modal-title 
+{
+    padding-left: 20px;
+    padding-right: 25px;
+}
+
+.cima button
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    background-color: rgba(0, 0, 0, 0.418);
+    border: none;
+}
+
+.modal-body{ padding: 40px;}
+
+.primeira
+{
+    position: relative;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px 30px;
+    border-radius: 20px;
+    border: solid black 2px;
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+html
+{
+    background: url("../imagens/fundo3.jpg")no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+}
+
+body{background-color: rgba(17, 29, 57, 0);}
+
+.sub
+{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.segunda
+{   
+    margin-top: 30px;
+    background-color: rgb(17, 29, 57);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.segunda h1
+{
+   margin-bottom: 20px;
+   color: white;
+}
+
+.carousel-inner
+{
+    border-radius: 20px;
+    border: solid black 2px;
+}
+
+.carousel-inner h5{color: white;}
+
+.carousel-inner {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-inner img{width: 100%;}
+
+.modal-content
+{
+    border-radius: 40px;
+    border: solid black 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+.primeira h1 {color: white;}
+
+.but
+{
+    background-color:rgba(0, 0, 0, 0.486) ;
+    border: solid black 2px;
+}
+
+.but:hover
+{
+    background-color: rgba(255, 255, 255, 0.438);
+    border: solid black 2px;
+}
+
+.login{
+    position: absolute;
+    right: 80px;
+}
+
+.main .bout_us {
+    background-color:  rgba(14, 133, 54, 0.13);
+    margin-top: 3%;
+    margin-bottom: 5%;
+    font-size: large;
+    text-align: center;
+}
+
+.main .crd {
+    padding-bottom: 3%;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1024px) {
+    li .responsivo{display: none;}
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .login i{
+        display: none;
+    }
+    li .responsivo{display: block;}
+    .primeira{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    .login i{
+        display: none;
+    }
+    li .responsivo {display: block;}
+    .carousel-inner {
+        width: 100%;
+    }
+    .primeira{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .main h2 {
+        padding-top: 10%;
+        padding-bottom: 5%;
+        text-align: left;
+    }
+    .cards .crd {
+        padding-bottom: 4%;
+    }
+    .cards {
+        padding-bottom: 8%;
+    }
+}
+
