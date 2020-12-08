@@ -1,6 +1,10 @@
-.main {margin: 20px;}
+.main {
+    margin: 20px;
+}
 
-body {font-family: 'Courier New', Courier, monospace;}
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
 
 .menu1 a {
     color: white;
@@ -10,14 +14,15 @@ body {font-family: 'Courier New', Courier, monospace;}
 }
 
 .logo {
-  max-width: 150px;
-  position: relative;
-  top: -20px;
+    height: 45px;
 }
 
-.header {background-color: rgb(167, 42, 42);}
+.header {
+    background-color: rgb(167, 42, 42);
+}
 
 .footer {
+    background-position: bottom;
     color: white;
     padding: 5px;
     background-color: rgb(17, 29, 57);
@@ -32,28 +37,36 @@ body {font-family: 'Courier New', Courier, monospace;}
 
 /* Media Queries */
 
-header {background-color: rgb(16, 69, 63);}
+header {
+    background-color: rgb(16, 69, 63);
+}
 
-header a {color: white;}
+header a {
+    color: white;
+}
 
-.logo {width: 150px;}
+.logo {
+    width: 150px;
+}
 
-.menu-icone {width: 50px;}
-
-.login{
-  position: absolute;
-  right: 80px;
+.menu-icone {
+    width: 50px;
 }
 
 @media screen and (min-width: 1024px) {
-    li .responsivo{display: none;}
+    .login p {
+        display: none;
+    }
+    .login i {
+        position: absolute;
+        right: 80px;
+    }
 }
 
 @media screen and (max-width: 1023px) {
     .login i {
         display: none;
     }
-    li .responsivo{display: block;}
 }
 
 

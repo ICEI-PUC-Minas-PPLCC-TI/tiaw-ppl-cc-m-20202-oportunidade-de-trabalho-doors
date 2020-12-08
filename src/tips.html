@@ -8,59 +8,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Doors</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../src/styles/tips.css">
+    
 
+    <script src="https://kit.fontawesome.com/2b4357143f.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../src/styles/tips.css">
+    
 </head>
 
 <body>
 
+
     <header>
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-            <a class="navbar-brand" href="../src/index.html">
-                <img src="../src/imagens/Logo.png" alt="Logo" class="logo">
-            </a>
+            <a class="navbar-brand" href="../src/index.html"><img src="../src/imagens/Logo.png" alt="Logo" class="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../src/feed.html">Página inicial</a>
+                        <a class="nav-link" href="#">Página inicial</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../src/tips.html">Dicas</a>
+                        <a class="nav-link" href="#">Dicas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sobre nós</a>
                     </li>
-                    <li class="login">
-                        <a class="nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                    <li>
+                        <a class="nav-link login" href="#">
                             <i class="fas fa-user fa-2x"></i>
+                            <p>Login</p>
                         </a>
-                        <div class="dropdown">
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="../src/login.html">Conectar</a>
-                                <a class="dropdown-item" href="#">Desconectar</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item navConect">
-                        <a class="nav-link responsivo" href="../src/login.html">Conectar</a>
-                        <a class="nav-link responsivo" href="#">Desconectar</a>
                     </li>
                 </ul>
             </div>
 
         </nav>
+
     </header>
+
 
     <main class="main">
 
@@ -68,90 +66,79 @@
 
         <h1> Dicas </h1>
         <div class="text-area">
-            <p><b>(Dicas super importantes)</b> - Veja aqui algumas dicas essenciais para construir o seu currículo.
-            </p>
-            <p>Nesse carrossel, separamos um sequência de 3 vídeos importantes para a montagem do seu currículo. Tais
-                vídeos te ajudarão a criar o seu primeiro
-                currículo, definir o objetivo do seu perfil curricular e a evitar erros que podem comprometer a sua
-                contratação. </p>
+            <p><b>(Dicas super importantes)</b> - Veja aqui algumas dicas essenciais para construir o seu currículo. </p>
+            <p>Nesse carrossel, separamos um sequência de 3 vídeos importantes para a montagem do seu currículo. Tais vídeos te ajudarão a criar o seu primeiro 
+                currículo, definir o objetivo do seu perfil curricular e a evitar erros que podem comprometer a sua contratação. </p>
         </div>
 
         <div class="container">
 
             <div id="myCarousel" class="carousel slide">
-                <!-- Indicadores -->
-                <ol class="carousel-indicators">
-                    <li class="item1 active"></li>
-                    <li class="item2"></li>
-                    <li class="item3"></li>
-                </ol>
-
-                <!-- Slides -->
-                <div class="carousel-inner" role="listbox">
-
-                    <div class="item active">
-                        <div class="iframe-container">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/teCJtOV1Q1U"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-
-                        <div class="carousel-caption">
-                            <h3>1º currículo</h3>
-                            <p>Aqui você encontrará dicas para como fazer o seu primeiro currículo.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="iframe-container">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0MxvryGnDwc"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-
-                        <div class="carousel-caption">
-                            <h3>Atenção!</h3>
-                            <p>Uma seleção de pontos para se evitar em seu currículo.</p>
-                        </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="iframe-container">
-                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vD6lQwT0e2k"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-
-                        <div class="carousel-caption">
-                            <h3>Objetivo?</h3>
-                            <p>Como construir o objetivo do perfil seu currículo.</p>
-                        </div>
-                    </div>
-
+              <!-- Indicadores -->
+              <ol class="carousel-indicators">
+                <li class="item1 active"></li>
+                <li class="item2"></li>
+                <li class="item3"></li>
+              </ol>
+          
+              <!-- Slides -->
+              <div class="carousel-inner" role="listbox">
+          
+                <div class="item active">
+                  <div class="iframe-container">
+                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/teCJtOV1Q1U" frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+          
+                  <div class="carousel-caption">
+                    <h3>1º currículo</h3>
+                    <p>Aqui você encontrará dicas para como fazer o seu primeiro currículo.</p>
+                  </div>
                 </div>
-
-                <!-- Controles -->
-                <a class="left carousel-control" href="#myCarousel" role="button">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" role="button">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+          
+                <div class="item">
+                  <div class="iframe-container">
+                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/0MxvryGnDwc" frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+          
+                  <div class="carousel-caption">
+                    <h3>Atenção!</h3>
+                    <p>Uma seleção de pontos para se evitar em seu currículo.</p>
+                  </div>
+                </div>
+              
+                <div class="item">
+                  <div class="iframe-container">
+                      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vD6lQwT0e2k" frameborder="0" 
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+          
+                  <div class="carousel-caption">
+                    <h3>Objetivo?</h3>
+                    <p>Como construir o objetivo do perfil seu currículo.</p>
+                  </div>
+                </div>
+            
+              </div>
+          
+              <!-- Controles -->
+              <a class="left carousel-control" href="#myCarousel" role="button">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" role="button">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
-
+          
         </div>
 
         <div class="text-area">
             <p><b>Sobre o carrossel</b></p>
-            <p>Ao utilizar o carrossel, para <b>alternar entre os vídeos</b>, basta passar o ponteiro do mouse sobre os
-                cantos direito ou esquerdo da interface dos vídeos e clicar
-                no ícone de seta. Caso queira saber sobre <b>o que o vídeo se trata</b>, passe o ponteiro na parte
-                inferior central do carrossel para visualizar a ideia principal
+            <p>Ao utilizar o carrossel, para <b>alternar entre os vídeos</b>, basta passar o ponteiro do mouse sobre os cantos direito ou esquerdo da interface dos vídeos e clicar 
+                no ícone de seta. Caso queira saber sobre <b>o que o vídeo se trata</b>, passe o ponteiro na parte inferior central do carrossel para visualizar a ideia principal 
                 do vídeo.</p>
             </p>
         </div>
@@ -165,69 +152,29 @@
 
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/2b4357143f.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
     <script>
-        function prepCabecalho() {
-            if (localStorage.getItem("statusLogin") != "1" && localStorage.getItem("statusLogin") != "2" &&
-                sessionStorage.getItem("statusLogin") != "1" && sessionStorage.getItem("statusLogin") != "2") {
-                document.querySelector(".navConect").innerHTML =
-                    `<a class="nav-link responsivo" href="../src/login.html">Conectar</a>`;
-                document.querySelector(".login .dropdown").innerHTML =
-                    `<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="../src/login.html">Conectar</a>
-                </div>`;
-            } else {
-                document.querySelector(".navConect").innerHTML =
-                    `<a class="nav-link responsivo" href="../src/perfil.html">Meu perfil</a>
-                <a class="nav-link responsivo" href="#" onclick="Desconect()">Desconectar</a>`;
-                document.querySelector(".login .dropdown").innerHTML =
-                    `<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="../src/perfil.html">Meu perfil</a>
-                    <a class="dropdown-item" href="#" onclick="Desconect()">Desconectar</a>
-                </div>`;
-            }
-        }
-
-        function Desconect() {
-            localStorage.setItem("statusLogin", "0");
-            sessionStorage.setItem("statusLogin", "0");
-            localStorage.setItem("userId", "0");
-            sessionStorage.setItem("userId", "0");
-            location = location;
-        }
-        $(document).ready(function () {
-            prepCabecalho();
-            // Ativar carrossel
-            $("#myCarousel").carousel();
-
-            // Funcionalidade dos indicadores
-            $(".item1").click(function () {
-                $("#myCarousel").carousel(0);
-            });
-            $(".item2").click(function () {
-                $("#myCarousel").carousel(1);
-            });
-            $(".item3").click(function () {
-                $("#myCarousel").carousel(2);
-            });
-
-            // Funcionalidade dos botões
-            $(".left").click(function () {
-                $("#myCarousel").carousel("prev");
-            });
-            $(".right").click(function () {
-                $("#myCarousel").carousel("next");
-            });
+        $(document).ready(function(){
+        // Ativar carrossel
+        $("#myCarousel").carousel();
+            
+        // Funcionalidade dos indicadores
+        $(".item1").click(function(){
+            $("#myCarousel").carousel(0);
+        });
+        $(".item2").click(function(){
+            $("#myCarousel").carousel(1);
+        });
+        $(".item3").click(function(){
+            $("#myCarousel").carousel(2);
+        });
+            
+        // Funcionalidade dos botões
+        $(".left").click(function(){
+            $("#myCarousel").carousel("prev");
+        });
+        $(".right").click(function(){
+            $("#myCarousel").carousel("next");
+        });
         });
     </script>
 </body>
