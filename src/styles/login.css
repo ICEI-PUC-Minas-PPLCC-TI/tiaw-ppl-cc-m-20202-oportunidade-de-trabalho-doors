@@ -9,6 +9,15 @@
     margin-bottom: 10px;
 }
 
+.aguarde{
+    background-color: rgb(250, 215, 176);
+    color: rgb(201, 151, 57);
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+    margin-bottom: 10px;
+}
+
 html,body{
 background-image: url("../imagens/fundoLogin.jpg");
 background-size: cover;
@@ -23,7 +32,7 @@ align-content: center;
 }
 
 .card{
-height: 370px;
+height: 420px;
 margin-top: auto;
 margin-bottom: auto;
 width: 400px;

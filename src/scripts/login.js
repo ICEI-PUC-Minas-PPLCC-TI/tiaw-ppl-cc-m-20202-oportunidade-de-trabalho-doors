@@ -271,7 +271,7 @@ function register() {
     };
 
     let ErrosS = () => {
-        if (inputPassword.value.length <= 8) {
+        if (inputPassword.value.length < 8) {
             alert('Senha muito fraca, a senha precisa de pelo menos 8 caracteres');
         }
     };
@@ -319,17 +319,23 @@ function register() {
     inputPassword.oninput = dicasSenha;
 
     $("#btnRegistrar").click(() => {
+        $("#instrucoes").addClass("aguarde");
+        $("#instrucoes").text("Aguarde...");
         if ($("#inputUser").val() == "") {
+            $("#instrucoes").removeClass("aguarde");
             $("#instrucoes").addClass("erro");
             $("#instrucoes").text("Preencha o campo de usuário");
         }
         else if ($("#inputPassword").val() == "") {
+            $("#instrucoes").removeClass("aguarde");
             $("#instrucoes").addClass("erro");
             $("#instrucoes").text("Preencha o campo de senha");
         } else if ($("#inputConfPass").val() == "") {
+            $("#instrucoes").removeClass("aguarde");
             $("#instrucoes").addClass("erro");
             $("#instrucoes").text("Confirme a senha");
         } else if ($("#inputPassword").val() != $("#inputConfPass").val()) {
+            $("#instrucoes").removeClass("aguarde");
             $("#instrucoes").addClass("erro");
             $("#instrucoes").text("Senhas não compatíveis");
         }
