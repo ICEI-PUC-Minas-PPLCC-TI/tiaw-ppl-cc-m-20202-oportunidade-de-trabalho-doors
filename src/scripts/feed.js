@@ -16,6 +16,9 @@ function newsFeedBox(img, title, desc, id) {
         if (dados[j].userId == accountId) {
             pos = j;
             break;
+        }else if (j == dados.length - 1) {
+            pos = dados.length;
+            dados.push(new fav(accountId, []));
         }
     }
 
