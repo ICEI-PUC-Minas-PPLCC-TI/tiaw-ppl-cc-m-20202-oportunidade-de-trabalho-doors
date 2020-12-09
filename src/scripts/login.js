@@ -56,8 +56,7 @@ function registerUser(userName, senha, empresarial) {
                 type: "POST",
                 url: urlUser,
                 data: JSON.parse(content)
-            }).done( function (data)
-            {
+            }).done(function (data) {
                 if (document.getElementById('inputRemember').checked) {
                     localStorage.setItem("statusLogin", data.type);
                     localStorage.setItem("userId", data.id);
@@ -65,11 +64,11 @@ function registerUser(userName, senha, empresarial) {
                     sessionStorage.setItem("statusLogin", data.type);
                     sessionStorage.setItem("userId", data.id);
                 }
-                let conta = new perfil (data.id, userName, "Nome não definido",
-                "Email não definido", "Descrição não definida", data.type);
+                let conta = new perfil(data.id, userName, "Nome não definido",
+                    "Email não definido", "Descrição não definida", data.type);
                 $.ajax({
                     type: "POST",
-                    url: "https://tiawdoors-api.herokuapp.com/" + userType ,
+                    url: "https://tiawdoors-api.herokuapp.com/" + userType,
                     data: conta
                 }).done((data) => {
                     console.log(data);
@@ -81,8 +80,7 @@ function registerUser(userName, senha, empresarial) {
 
 }
 
-function loginForm()
-{
+function loginForm() {
     box = ` <div class="card-header">
                 <h3>Logar</h3>
             </div>
@@ -150,6 +148,7 @@ function register() {
                 </div>
                 <input type="password" class="form-control" placeholder="Senha" id="inputPassword">
             </div>
+            <span id="erroS"></span>
             <div class="input-group form-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-key"></i></span>
@@ -168,6 +167,156 @@ function register() {
         </div>`;
 
     $("#logArea").html(box);
+
+    //--------------------------------------------------------------------------------outro
+
+    btnRegistrar.disabled = true;
+
+    let preencher = () => {
+        if (inputUser.value.length == 0 || inputPassword.value.length == 0) {
+            btnRegistrar.disabled = true;
+        }
+        else {
+            if (inputPassword.value.length < 8) {
+                alert('A senha deve conter no mínimo 8 caracteres');
+                erroS.innerHTML = '<span> * </span>';
+                erroS.style.color = 'red';
+                inputPassword.style.backgroundColor = 'rgba(255, 6, 31, 0.16)';
+                btnRegistrar.disabled = true;
+
+            }
+            else {
+                erroS.innerHTML = '<span></span>';
+                btnRegistrar.disabled = false;
+            }
+        }
+    };
+
+    let dicasSenha = () => {
+
+
+        if (inputPassword.value.length <= 3) {
+            erroS.innerHTML = '<span> Senha muito fraca </span>';
+
+            erroS.style.color = 'rgb(255, 0, 0)';
+
+            erroS.style.fontWeight = 'weight';
+
+            btnRegistrar.disabled = true;
+
+        }
+        else {
+
+            if (inputPassword.value.length >= 4 && inputPassword.value.length < 6) {
+
+                erroS.innerHTML = '<span> Senha fraca </span>';
+
+                erroS.style.color = 'rgb(255, 0, 0)';
+
+                erroS.style.fontWeight = 'weight';
+
+                btnRegistrar.disabled = true;
+
+            }
+            else {
+
+                if (inputPassword.value.length >= 6 && inputPassword.value.length < 8) {
+
+                    erroS.innerHTML = '<span> Senha média </span>';
+
+                    erroS.style.color = 'orange';
+
+                    erroS.style.fontWeight = 'weight';
+
+                    btnRegistrar.disabled = true;
+
+
+                }
+                else {
+                    if (inputPassword.value.length >= 8) {
+
+                        erroS.innerHTML = '<span> Senha forte </span>';
+
+                        erroS.style.color = 'rgb(18, 165, 4)';
+
+                        erroS.style.fontWeight = 'weight';
+
+                        if (inputPassword.value.length >= 8) {
+                            btnRegistrar.disabled = false;
+                        }
+
+                    }
+
+                    if (inputPassword.value.length >= 8) {
+
+                        erroS.innerHTML = '<span> Senha muito forte </span>';
+
+                        erroS.style.color = 'rgb(0, 255, 0)';
+
+                        erroS.style.fontWeight = 'weight';
+
+                        if (inputPassword.value.length >= 8 && percorrerSenha() == true) {
+                            btnRegistrar.disabled = false;
+                        }
+
+
+                    }
+
+                }
+
+
+
+            }
+        }
+    };
+
+    let ErrosS = () => {
+        if (inputPassword.value.length <= 8) {
+            alert('Senha muito fraca, a senha precisa de pelo menos 8 caracteres');
+        }
+    };
+
+    let percorrerSenha = () => {
+
+        let result = false;
+        let cont = 0;
+        let minuscula = 0;
+        let maiuscula = 0;
+        let save = '';
+
+        for (let x = 0; x < inputPassword.value.length; x = x + 1) {
+            save = inputPassword.value[x];
+
+            if (save >= '1' && save <= '9') {
+                cont = cont + 1;
+            }
+            else {
+                if (save >= 'a' && save <= 'z') {
+                    minuscula = minuscula + 1;
+                }
+                else {
+                    if (save >= 'A' && save <= 'Z') {
+                        maiuscula = maiuscula + 1;
+                    }
+
+                }
+
+            }
+        }
+
+
+        if (cont >= 8 && minuscula >= 1 && maiuscula >= 1) {
+            result = true;
+        }
+
+        return result;
+    };
+
+    //registro
+
+    inputUser.onchange = preencher;
+    inputPassword.onchange = ErrosS;
+    inputPassword.oninput = dicasSenha;
 
     $("#btnRegistrar").click(() => {
         if ($("#inputUser").val() == "") {
@@ -195,11 +344,10 @@ function register() {
 window.onload = () => {
     //localStorage.setItem("statusLogin", "0");
     if (localStorage.getItem("statusLogin") == 1 ||
-        localStorage.getItem("statusLogin") == 2) 
-    {
+        localStorage.getItem("statusLogin") == 2) {
         window.location.replace("../src/feed.html");
-    } else if(sessionStorage.getItem("statusLogin") == 1 ||
-                sessionStorage.getItem("statusLogin") == 2){
+    } else if (sessionStorage.getItem("statusLogin") == 1 ||
+        sessionStorage.getItem("statusLogin") == 2) {
         window.location.replace("../src/feed.html");
     }
     else {

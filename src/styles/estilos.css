@@ -168,3 +168,8 @@ body{background-color: rgba(17, 29, 57, 0);}
         margin-bottom: 0px;
     }
 }
+#BtnButon
+{
+    color: white;
+    text-decoration: none;
+}
