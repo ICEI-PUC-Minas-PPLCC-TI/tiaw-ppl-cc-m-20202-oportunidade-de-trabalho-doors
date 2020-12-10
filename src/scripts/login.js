@@ -247,7 +247,7 @@ function register() {
 
                     }
 
-                    if (inputPassword.value.length >= 8) {
+                    if (inputPassword.value.length >= 8 && percorrerSenha() == true) {
 
                         erroS.innerHTML = '<span> Senha muito forte </span>';
 
@@ -277,7 +277,7 @@ function register() {
     };
 
     let percorrerSenha = () => {
-
+        
         let result = false;
         let cont = 0;
         let minuscula = 0;
@@ -305,10 +305,9 @@ function register() {
         }
 
 
-        if (cont >= 8 && minuscula >= 1 && maiuscula >= 1) {
+        if (cont >= 1 && minuscula >= 1 && maiuscula >= 1 && inputPassword.value.length>=8) {
             result = true;
         }
-
         return result;
     };
 
